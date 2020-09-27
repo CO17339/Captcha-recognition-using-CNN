@@ -15,6 +15,7 @@ The model is developed using Convolutional Neural Network for detecting the Capt
 The dataset consists of images of size 50 height and 200 width. These images first need to be pre-processed before developing the model. For the purpose of training, the images in the dataset have a filename same as the CAPTCHA possessed by the image. The images are first pre-processed by reading them in grayscale. This helps us to remove the noise to some extent as the images get invariant of the background color. Simultaneously, the file name is also stored in a string.
 Each grayscale image is then scaled and reshaped. Then we create an array of dimension 5*36, used to store the character present at each position in the CAPTCHA. At each position, through filename we find which characters are present at each position of the CAPTCHA and update the corresponding location to one in this array. This array will thus be used for training the model.Thus, after pre-processing we obtain all the grayscale images and the target array containing information regarding the characters present in each CAPTCHA image
 .
+
 #### Model Development
 
 The model developed for this CAPTCHA dataset uses CNN. It consists of a total twenty four layers comprising the input layer, convolutional layers, max pooling layers, dense layers, flatten layers and dropout layers. The total numbers of parameters is 1,818,196 where 1,818,132 parameters are trainable and 64 are non-trainable parameters. A brief architecture of the layers is depicted in figure.
